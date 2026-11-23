@@ -1,0 +1,247 @@
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+}
+h1,
+h2,
+h3,
+p,
+figure,
+blockquote,
+ol {
+  margin: 0;
+}
+ol {
+  padding: 0;
+  list-style: none;
+}
+button,
+input,
+select,
+textarea {
+  font: inherit;
+}
+button {
+  border: 0;
+  cursor: pointer;
+}
+a {
+  color: inherit;
+  text-decoration: none;
+}
+.cgv {
+  --cgv-paper: #f4f0e8;
+  --cgv-ink: #45526b;
+  --cgv-ink-soft: #6c778b;
+  --cgv-accent-deep: #45526b;
+  --cgv-gold: #b89a5e;
+  --cgv-script: "Alex Brush", cursive;
+  --cgv-serif: "Playfair Display", Georgia, serif;
+  --cgv-sans: "Montserrat", system-ui, sans-serif;
+}
+.lc {
+  --lc-hero: url("/media/hero.webp");
+  --lc-nacre: url("/media/nacre.webp");
+  --lc-dayframe: url("/media/drapes.webp");
+  --lc-giftframe: url("/media/gift_frame.webp");
+}
+.fe-nacre {
+  --fe-env: url("/media/paper.webp");
+  --fe-card: url("/media/hero.webp");
+  --fe-pocket: url("/media/pocket.webp");
+  --fe-inside: url("/media/inside.webp");
+  --fe-glint: url("/media/paper_glint.webp");
+  --fe-glint-b: url("/media/pocket_glint.webp");
+  --fe-hh: 50dvh;
+}
+.lc.lc-open .lc-hero :is(.lc-h1, .lc-h2, .lc-h3, .lc-h4, .lc-h5) {
+  opacity: 1;
+  transform: none;
+}
+.lc.lc-open .lc-h2 {
+  transition-delay: 0.35s;
+}
+.lc.lc-open .lc-h3 {
+  transition-delay: 0.7s;
+}
+.lc.lc-open .lc-h4 {
+  transition-delay: 0.95s;
+}
+.lc.lc-open .lc-h5 {
+  transition-delay: 1.2s;
+}
+.lc.lc-nacre.lc-open .lc-hero-in::before {
+  opacity: 1;
+}
+.lc .lc-names span,
+.cgv-side-brand {
+  max-width: 100%;
+  overflow-wrap: anywhere;
+}
+.cgv-progress {
+  pointer-events: none;
+}
+.cgv-progress i {
+  display: block;
+  height: 100%;
+  background: var(--cgv-gold);
+  transform-origin: left;
+  transform: scaleX(0);
+}
+.cgv-disc[aria-pressed="false"] {
+  opacity: 0.65;
+}
+.preview-tools {
+  font:
+    12px/1.4 system-ui,
+    sans-serif;
+  color: white;
+}
+.preview-tools .pill,
+.name-tools,
+.order {
+  position: fixed;
+  z-index: 80;
+}
+.pill {
+  display: flex;
+  align-items: center;
+  gap: 2px;
+  border-radius: 99px;
+  background: #000b;
+  backdrop-filter: blur(8px);
+}
+.design-bar {
+  left: 12px;
+  top: 12px;
+  padding: 4px 6px;
+}
+.design-bar a {
+  min-width: 32px;
+  height: 32px;
+  display: grid;
+  place-items: center;
+  border-radius: 99px;
+  opacity: 0.75;
+}
+.design-bar a:nth-child(2),
+.design-bar a:nth-child(4) {
+  font-size: 17px;
+}
+.design-bar strong {
+  padding: 0 2px;
+  font-weight: 600;
+}
+.design-bar span {
+  opacity: 0.4;
+}
+.pill a:hover {
+  background: #fff2;
+  opacity: 1;
+}
+.pill a[aria-current] {
+  color: #ffd24d;
+  font-weight: 700;
+  opacity: 1;
+}
+.occasion {
+  right: 12px;
+  top: 58px;
+  padding: 4px;
+  font-size: 11px;
+}
+.occasion a {
+  padding: 6px 10px;
+  border-radius: 99px;
+  opacity: 0.75;
+}
+.occasion a[aria-current] {
+  background: #fff3;
+}
+.name-tools {
+  left: 12px;
+  top: 58px;
+}
+.try,
+.order {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  border-radius: 99px;
+  box-shadow: 0 6px 15px #0004;
+  font-weight: 600;
+}
+.try {
+  padding: 6px 14px;
+  background: #fff;
+  color: #211a14;
+}
+.try svg {
+  color: #b08d57;
+}
+.opened .try {
+  padding: 8px;
+}
+.name-panel {
+  position: absolute;
+  top: calc(100% + 8px);
+  left: 0;
+  width: min(280px, 90vw);
+  background: #fffdf9;
+  color: #30261d;
+  padding: 18px;
+  border-radius: 16px;
+  box-shadow: 0 12px 40px #0003;
+  display: grid;
+  gap: 10px;
+}
+.name-panel label {
+  display: grid;
+  gap: 3px;
+}
+.name-panel input {
+  border: 1px solid #d2c5b4;
+  border-radius: 6px;
+  padding: 8px;
+}
+.name-panel button {
+  background: #493c31;
+  color: white;
+  padding: 8px;
+  border-radius: 8px;
+}
+.name-panel small {
+  color: #756c64;
+}
+.order {
+  bottom: 16px;
+  right: 16px;
+  color: black;
+  background: #fbbf24;
+  padding: 12px 20px;
+  font-size: 14px;
+  transition: transform 0.5s;
+}
+.opened .order {
+  transform: translate(-62px, -88px);
+  padding: 8px 14px;
+  font-size: 12px;
+}
+@media (max-width: 380px) {
+  .occasion {
+    top: 94px;
+  }
+  .name-tools:has(.name-panel) {
+    z-index: 85;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  * {
+    scroll-behavior: auto !important;
+  }
+  .order {
+    transition: none;
+  }
+}

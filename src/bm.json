@@ -1,0 +1,231 @@
+{
+  "greeting": "Assalamualaikum w.b.t.",
+  "verse": "“Dan antara tanda-tanda kebesaran-Nya ialah Dia menciptakan untukmu pasangan daripada jenismu sendiri, supaya kamu merasa tenteram kepadanya, dan Dia menjadikan antara kamu rasa kasih dan sayang.”",
+  "verseSource": "Surah Ar-Rum · 21",
+  "couple": "Pengantin",
+  "family": [
+    {
+      "role": "Pengantin lelaki",
+      "fullName": "Muhammad Rayyan bin Bujang",
+      "parents": [
+        "Putera kepada",
+        "Tuan Haji Bujang bin Rahman & Puan Hajah Salmah binti Yaakob"
+      ]
+    },
+    {
+      "role": "Pengantin perempuan",
+      "fullName": "Nur Sofea binti Dzulkharnain",
+      "parents": [
+        "Puteri kepada",
+        "Tuan Haji Dzulkharnain bin Ismail & Puan Hajah Rosnah binti Hamzah"
+      ]
+    }
+  ],
+  "eventsHeading": "Majlis",
+  "countdown": "Detik Menanti",
+  "units": ["Hari", "Jam", "Minit", "Saat"],
+  "soon": "Jumpa nanti!",
+  "dress": [
+    "Kod Pakaian",
+    "Pakaian Formal",
+    "Kami amat berbesar hati jika anda dapat berpakaian mengikut tema pilihan kami."
+  ],
+  "gallery": "Galeri Kami",
+  "gift": [
+    "Hadiah Perkahwinan",
+    "Kehadiran anda adalah hadiah terindah buat kami.",
+    "Sekiranya anda ingin memberi hadiah, anda boleh berbuat demikian secara pindahan bank."
+  ],
+  "banks": [
+    ["Maybank", "5620 1123 4567", "Muhammad Rayyan bin Bujang", "Salin"],
+    ["CIMB", "7602 1234 5678 90", "Nur Sofea binti Dzulkharnain", "Salin"]
+  ],
+  "deadline": "Sila sahkan kehadiran sebelum 31 Disember 2026",
+  "tap": "Sentuh untuk buka",
+  "form": ["Nama", "Kehadiran", "Bilangan tetamu", "Ucapan untuk pengantin"],
+  "attendance": ["Hadir", "Tidak dapat hadir"],
+  "submit": "Hantar",
+  "wishes": [
+    [
+      "“Semoga bahagia hingga ke akhir hayat. Tak sabar nak raikan kalian!”",
+      "Farah & Iqbal"
+    ],
+    [
+      "“Dua insan paling baik hati kami kenal. Selamat pengantin baru!”",
+      "Keluarga Tan"
+    ],
+    [
+      "“Bangganya melihat kalian berdua. Jumpa di majlis nanti!”",
+      "Aunty Zaharah"
+    ]
+  ],
+  "closing": "Dengan penuh kasih,",
+  "variants": {
+    "resepsi": {
+      "title": "Walimatulurus",
+      "venue": "Grand Ballroom, St. Regis Kuala Lumpur",
+      "city": "Kuala Lumpur",
+      "intro": "Dengan penuh kesyukuran ke hadrat Ilahi, kami menjemput Dato' | Datin | Tuan | Puan | Encik | Cik sekeluarga ke majlis perkahwinan putera-puteri kami.",
+      "events": [
+        {
+          "name": "Akad Nikah",
+          "venue": "Masjid Wilayah Persekutuan",
+          "city": "Kuala Lumpur",
+          "details": [
+            "Sabtu, 23 Januari 2027 · 10:00 AM — 12:00 PM",
+            "Jalan Tuanku Abdul Halim, 50480 Kuala Lumpur"
+          ],
+          "illustrated": true,
+          "links": [
+            {
+              "label": "Dapatkan Arah",
+              "url": "https://www.google.com/maps/search/?api=1&query=Masjid+Wilayah+Persekutuan+Kuala+Lumpur"
+            }
+          ]
+        },
+        {
+          "name": "Majlis Resepsi",
+          "venue": "Grand Ballroom, St. Regis Kuala Lumpur",
+          "city": "Kuala Lumpur",
+          "details": [
+            "Sabtu, 23 Januari 2027 · 7:30 PM — 10:30 PM",
+            "6, Jalan Stesen Sentral 2, 50470 Kuala Lumpur"
+          ],
+          "illustrated": false,
+          "links": [
+            {
+              "label": "Dapatkan Arah",
+              "url": "https://www.google.com/maps/search/?api=1&query=The+St+Regis+Kuala+Lumpur"
+            },
+            {
+              "label": "Waze",
+              "url": "https://waze.com/ul?q=The%20St%20Regis%20Kuala%20Lumpur"
+            }
+          ]
+        }
+      ],
+      "calendar": {
+        "label": "Simpan dalam Kalendar",
+        "url": "https://www.google.com/calendar/render?action=TEMPLATE&text=The%20Wedding%20of%20Rayyan%20%26%20Sofea&dates=20270123T113000Z/20270123T143000Z&location=The%20St.%20Regis%20Kuala%20Lumpur"
+      },
+      "day": "Atur Cara",
+      "dayIntro": "Sehari untuk diraikan, dari salam pertama hingga ke penghujung majlis.",
+      "schedule": [
+        ["11:00 pagi", "Ketibaan tetamu", "Jamuan dibuka"],
+        ["12:00 tgh", "Ketibaan pengantin"],
+        [
+          "12:30 tgh",
+          "Perarakan masuk pengantin",
+          "Diiringi kompang dari pintu utama"
+        ],
+        ["1:00 ptg", "Bersanding & sesi bergambar"],
+        ["2:00 ptg", "Makan beradab"],
+        ["4:00 ptg", "Majlis bersurai"]
+      ]
+    },
+    "nikah": {
+      "title": "Majlis Akad Nikah",
+      "venue": "Masjid Wilayah Persekutuan",
+      "city": "Kuala Lumpur",
+      "intro": "Dengan penuh kesyukuran ke hadrat Ilahi, kami menjemput Dato' | Datin | Tuan | Puan | Encik | Cik sekeluarga ke majlis akad nikah putera-puteri kami.",
+      "events": [
+        {
+          "name": "Akad Nikah",
+          "venue": "Masjid Wilayah Persekutuan",
+          "city": "Kuala Lumpur",
+          "details": [
+            "Sabtu, 23 Januari 2027 · 10:00 AM — 12:00 PM",
+            "Jalan Tuanku Abdul Halim, 50480 Kuala Lumpur"
+          ],
+          "illustrated": true,
+          "links": [
+            {
+              "label": "Dapatkan Arah",
+              "url": "https://www.google.com/maps/search/?api=1&query=Masjid+Wilayah+Persekutuan+Kuala+Lumpur"
+            }
+          ]
+        }
+      ],
+      "calendar": {
+        "label": "Simpan dalam Kalendar",
+        "url": "https://www.google.com/calendar/render?action=TEMPLATE&text=The%20Wedding%20of%20Rayyan%20%26%20Sofea&dates=20270123T020000Z/20270123T040000Z&location=The%20St.%20Regis%20Kuala%20Lumpur"
+      },
+      "day": "Atur Cara",
+      "dayIntro": "Sehari untuk diraikan, dari salam pertama hingga ke penghujung majlis.",
+      "schedule": [
+        ["9:30 pagi", "Ketibaan tetamu"],
+        ["10:00 pagi", "Ketibaan rombongan pengantin lelaki"],
+        ["10:15 pagi", "Khutbah nikah"],
+        ["10:30 pagi", "Lafaz akad nikah", "Diikuti bacaan doa"],
+        ["11:00 pagi", "Penyerahan mas kahwin & sarung cincin"],
+        ["11:30 pagi", "Jamuan ringan"]
+      ]
+    },
+    "tunang": {
+      "title": "Majlis Pertunangan",
+      "venue": "Grand Ballroom, St. Regis Kuala Lumpur",
+      "city": "Kuala Lumpur",
+      "intro": "Dengan penuh kesyukuran ke hadrat Ilahi, kami menjemput Dato' | Datin | Tuan | Puan | Encik | Cik sekeluarga ke majlis pertunangan putera-puteri kami.",
+      "events": [
+        {
+          "name": "Majlis Pertunangan",
+          "venue": "Grand Ballroom, St. Regis Kuala Lumpur",
+          "city": "Kuala Lumpur",
+          "details": [
+            "Sabtu, 23 Januari 2027 · 7:30 PM — 10:30 PM",
+            "6, Jalan Stesen Sentral 2, 50470 Kuala Lumpur"
+          ],
+          "illustrated": true,
+          "links": [
+            {
+              "label": "Dapatkan Arah",
+              "url": "https://www.google.com/maps/search/?api=1&query=The+St+Regis+Kuala+Lumpur"
+            },
+            {
+              "label": "Waze",
+              "url": "https://waze.com/ul?q=The%20St%20Regis%20Kuala%20Lumpur"
+            }
+          ]
+        }
+      ],
+      "calendar": {
+        "label": "Simpan dalam Kalendar",
+        "url": "https://www.google.com/calendar/render?action=TEMPLATE&text=The%20Wedding%20of%20Rayyan%20%26%20Sofea&dates=20270123T113000Z/20270123T143000Z&location=The%20St.%20Regis%20Kuala%20Lumpur"
+      },
+      "day": "Atur Cara",
+      "dayIntro": "Sehari untuk diraikan, dari salam pertama hingga ke penghujung majlis.",
+      "schedule": [
+        ["11:00 pagi", "Ketibaan rombongan pihak lelaki"],
+        ["11:30 pagi", "Kata aluan & perbincangan wakil keluarga"],
+        ["12:00 tgh", "Penyerahan hantaran", "Diikuti sarung cincin"],
+        ["12:30 tgh", "Bacaan doa"],
+        ["1:00 ptg", "Jamuan makan"]
+      ],
+      "couple": "Pasangan",
+      "family": [
+        {
+          "role": "Bakal pengantin lelaki",
+          "fullName": "Muhammad Rayyan bin Bujang",
+          "parents": [
+            "Putera kepada",
+            "Tuan Haji Bujang bin Rahman & Puan Hajah Salmah binti Yaakob"
+          ]
+        },
+        {
+          "role": "Bakal pengantin perempuan",
+          "fullName": "Nur Sofea binti Dzulkharnain",
+          "parents": [
+            "Puteri kepada",
+            "Tuan Haji Dzulkharnain bin Ismail & Puan Hajah Rosnah binti Hamzah"
+          ]
+        }
+      ],
+      "gift": [
+        "Hadiah",
+        "Kehadiran anda adalah hadiah terindah buat kami.",
+        "Sekiranya anda ingin memberi hadiah, anda boleh berbuat demikian secara pindahan bank."
+      ],
+      "form": ["Nama", "Kehadiran", "Bilangan tetamu", "Ucapan untuk pasangan"]
+    }
+  }
+}

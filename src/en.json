@@ -1,0 +1,223 @@
+{
+  "greeting": "Assalamualaikum w.b.t.",
+  "verse": "“And among His signs is that He created for you spouses from among yourselves, so that you may find tranquility in them; and He placed between you love and mercy.”",
+  "verseSource": "Surah Ar-Rum · 21",
+  "couple": "The Couple",
+  "family": [
+    {
+      "role": "The groom",
+      "fullName": "Muhammad Rayyan bin Bujang",
+      "parents": [
+        "Beloved son of",
+        "Tuan Haji Bujang bin Rahman & Puan Hajah Salmah binti Yaakob"
+      ]
+    },
+    {
+      "role": "The bride",
+      "fullName": "Nur Sofea binti Dzulkharnain",
+      "parents": [
+        "Beloved daughter of",
+        "Tuan Haji Dzulkharnain bin Ismail & Puan Hajah Rosnah binti Hamzah"
+      ]
+    }
+  ],
+  "eventsHeading": "Events",
+  "countdown": "Countdown",
+  "units": ["Days", "Hours", "Minutes", "Seconds"],
+  "soon": "See you soon!",
+  "dress": [
+    "Dress Code",
+    "Formal Attire",
+    "We would be delighted if you could dress along with our chosen palette."
+  ],
+  "gallery": "Our Gallery",
+  "gift": [
+    "Wedding Gift",
+    "Your presence is our greatest gift.",
+    "Should you wish to give a gift, you may do so by bank transfer."
+  ],
+  "banks": [
+    ["Maybank", "5620 1123 4567", "Muhammad Rayyan bin Bujang", "Copy"],
+    ["CIMB", "7602 1234 5678 90", "Nur Sofea binti Dzulkharnain", "Copy"]
+  ],
+  "deadline": "Kindly respond by 31 December 2026",
+  "tap": "Tap to open",
+  "form": ["Your name", "Attendance", "Guests", "Your wishes for the couple"],
+  "attendance": ["Joyfully accepts", "Regretfully declines"],
+  "submit": "Send RSVP",
+  "wishes": [
+    [
+      "“Wishing you a lifetime of love and laughter. Can't wait to celebrate!”",
+      "Farah & Iqbal"
+    ],
+    ["“Two of the kindest souls we know. Congratulations!”", "The Tan Family"],
+    ["“So proud of you both. See you at the wedding!”", "Aunty Zaharah"]
+  ],
+  "closing": "With love,",
+  "variants": {
+    "resepsi": {
+      "title": "The Wedding of",
+      "venue": "Grand Ballroom, St. Regis Kuala Lumpur",
+      "city": "Kuala Lumpur",
+      "intro": "With grateful hearts and surrounded by the love of our families, we request the pleasure of your company as we celebrate the joy of our marriage and the beginning of a lifetime together.",
+      "events": [
+        {
+          "name": "Akad Nikah",
+          "venue": "Masjid Wilayah Persekutuan",
+          "city": "Kuala Lumpur",
+          "details": [
+            "Saturday, 23 January 2027 · 10:00 AM — 12:00 PM",
+            "Jalan Tuanku Abdul Halim, 50480 Kuala Lumpur"
+          ],
+          "illustrated": true,
+          "links": [
+            {
+              "label": "Get Directions",
+              "url": "https://www.google.com/maps/search/?api=1&query=Masjid+Wilayah+Persekutuan+Kuala+Lumpur"
+            }
+          ]
+        },
+        {
+          "name": "Wedding Reception",
+          "venue": "Grand Ballroom, St. Regis Kuala Lumpur",
+          "city": "Kuala Lumpur",
+          "details": [
+            "Saturday, 23 January 2027 · 7:30 PM — 10:30 PM",
+            "6, Jalan Stesen Sentral 2, 50470 Kuala Lumpur"
+          ],
+          "illustrated": false,
+          "links": [
+            {
+              "label": "Get Directions",
+              "url": "https://www.google.com/maps/search/?api=1&query=The+St+Regis+Kuala+Lumpur"
+            },
+            {
+              "label": "Waze",
+              "url": "https://waze.com/ul?q=The%20St%20Regis%20Kuala%20Lumpur"
+            }
+          ]
+        }
+      ],
+      "calendar": {
+        "label": "Add to Calendar",
+        "url": "https://www.google.com/calendar/render?action=TEMPLATE&text=The%20Wedding%20of%20Rayyan%20%26%20Sofea&dates=20270123T113000Z/20270123T143000Z&location=The%20St.%20Regis%20Kuala%20Lumpur"
+      },
+      "day": "The Day",
+      "dayIntro": "A day to celebrate, from the first hello to the last dance.",
+      "schedule": [
+        ["11:00 am", "Guests arrive", "Lunch service opens"],
+        ["12:00 pm", "The couple arrive"],
+        [
+          "12:30 pm",
+          "Wedding procession",
+          "Led by kompang from the main entrance"
+        ],
+        ["1:00 pm", "Bersanding & photographs"],
+        ["2:00 pm", "Lunch is served"],
+        ["4:00 pm", "Celebration ends"]
+      ]
+    },
+    "nikah": {
+      "title": "The Solemnisation of",
+      "venue": "Masjid Wilayah Persekutuan",
+      "city": "Kuala Lumpur",
+      "intro": "With grateful hearts and surrounded by the love of our families, we request the pleasure of your company as we celebrate our solemnisation and the beginning of a lifetime together.",
+      "events": [
+        {
+          "name": "Solemnisation",
+          "venue": "Masjid Wilayah Persekutuan",
+          "city": "Kuala Lumpur",
+          "details": [
+            "Saturday, 23 January 2027 · 10:00 AM — 12:00 PM",
+            "Jalan Tuanku Abdul Halim, 50480 Kuala Lumpur"
+          ],
+          "illustrated": true,
+          "links": [
+            {
+              "label": "Get Directions",
+              "url": "https://www.google.com/maps/search/?api=1&query=Masjid+Wilayah+Persekutuan+Kuala+Lumpur"
+            }
+          ]
+        }
+      ],
+      "calendar": {
+        "label": "Add to Calendar",
+        "url": "https://www.google.com/calendar/render?action=TEMPLATE&text=The%20Wedding%20of%20Rayyan%20%26%20Sofea&dates=20270123T020000Z/20270123T040000Z&location=The%20St.%20Regis%20Kuala%20Lumpur"
+      },
+      "day": "The Day",
+      "dayIntro": "A day to celebrate, from the first hello to the last dance.",
+      "schedule": [
+        ["9:30 am", "Guests arrive"],
+        ["10:00 am", "The groom's party arrives"],
+        ["10:15 am", "The marriage sermon"],
+        ["10:30 am", "The akad nikah", "Followed by a prayer"],
+        ["11:00 am", "The mahar & exchange of rings"],
+        ["11:30 am", "Light refreshments"]
+      ]
+    },
+    "tunang": {
+      "title": "The Engagement of",
+      "venue": "Grand Ballroom, St. Regis Kuala Lumpur",
+      "city": "Kuala Lumpur",
+      "intro": "With grateful hearts and surrounded by the love of our families, we request the pleasure of your company as we celebrate our engagement and the promise of a lifetime together.",
+      "events": [
+        {
+          "name": "Engagement Ceremony",
+          "venue": "Grand Ballroom, St. Regis Kuala Lumpur",
+          "city": "Kuala Lumpur",
+          "details": [
+            "Saturday, 23 January 2027 · 7:30 PM — 10:30 PM",
+            "6, Jalan Stesen Sentral 2, 50470 Kuala Lumpur"
+          ],
+          "illustrated": true,
+          "links": [
+            {
+              "label": "Get Directions",
+              "url": "https://www.google.com/maps/search/?api=1&query=The+St+Regis+Kuala+Lumpur"
+            },
+            {
+              "label": "Waze",
+              "url": "https://waze.com/ul?q=The%20St%20Regis%20Kuala%20Lumpur"
+            }
+          ]
+        }
+      ],
+      "calendar": {
+        "label": "Add to Calendar",
+        "url": "https://www.google.com/calendar/render?action=TEMPLATE&text=The%20Wedding%20of%20Rayyan%20%26%20Sofea&dates=20270123T113000Z/20270123T143000Z&location=The%20St.%20Regis%20Kuala%20Lumpur"
+      },
+      "day": "The Day",
+      "dayIntro": "A day to celebrate, from the first hello to the last dance.",
+      "schedule": [
+        ["11:00 am", "The groom's family arrives"],
+        ["11:30 am", "Welcome & the families' words"],
+        ["12:00 pm", "Exchange of gifts", "Followed by the ring"],
+        ["12:30 pm", "A prayer"],
+        ["1:00 pm", "Lunch"]
+      ],
+      "family": [
+        {
+          "role": "The groom-to-be",
+          "fullName": "Muhammad Rayyan bin Bujang",
+          "parents": [
+            "Beloved son of",
+            "Tuan Haji Bujang bin Rahman & Puan Hajah Salmah binti Yaakob"
+          ]
+        },
+        {
+          "role": "The bride-to-be",
+          "fullName": "Nur Sofea binti Dzulkharnain",
+          "parents": [
+            "Beloved daughter of",
+            "Tuan Haji Dzulkharnain bin Ismail & Puan Hajah Rosnah binti Hamzah"
+          ]
+        }
+      ],
+      "gift": [
+        "Gift",
+        "Your presence is our greatest gift.",
+        "Should you wish to give a gift, you may do so by bank transfer."
+      ]
+    }
+  }
+}
