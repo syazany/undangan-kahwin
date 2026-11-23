@@ -1,3 +1,4 @@
+import { wedding, displayDate, startsAt } from "./wedding";
 import React, { Fragment, useEffect, useRef, useState } from "react";
 import Guestbook from "./Guestbook";
 import ScratchPhoto from "./ScratchPhoto";
@@ -30,10 +31,7 @@ function Countdown({ t }) {
     const id = setInterval(() => setNow(Date.now()), 1000);
     return () => clearInterval(id);
   }, []);
-  const seconds = Math.max(
-    0,
-    Math.floor((Date.parse("2027-01-23T19:30:00+08:00") - now) / 1000),
-  );
+  const seconds = Math.max(0, Math.floor((startsAt.getTime() - now) / 1000));
   const digits = [
     Math.floor(seconds / 86400),
     Math.floor(seconds / 3600) % 24,
@@ -57,7 +55,7 @@ function Countdown({ t }) {
     </section>
   );
 }
-function Gift({ t, bm, personalize }) {
+function Gift({ t, bm }) {
   const [status, setStatus] = useState("");
   return (
     <section className="lc-sec lc-gift">
@@ -69,7 +67,7 @@ function Gift({ t, bm, personalize }) {
           <div className="lc-acct" key={bank}>
             <span className="lc-caps">{bank}</span>
             <b>{number}</b>
-            <span>{personalize(name)}</span>
+            <span>{name}</span>
             <button
               className="lc-btn lc-btn-sm"
               onClick={async () => {
@@ -109,13 +107,8 @@ export default function Card({ t, names, open, bm, event }) {
     card.current.querySelectorAll(".lc-rv").forEach((n) => observer.observe(n));
     return () => observer.disconnect();
   }, [open]);
-  const personalize = (text) =>
-    text.replace(/Rayyan|Sofea/g, (match) => names[match === "Rayyan" ? 0 : 1]);
   const calendar = new URL(t.calendar.url);
-  calendar.searchParams.set(
-    "text",
-    personalize(calendar.searchParams.get("text")),
-  );
+  calendar.searchParams.set("text", t.title + " " + names.join(" & "));
   return (
     <article
       ref={card}
@@ -131,7 +124,7 @@ export default function Card({ t, names, open, bm, event }) {
             <span className="lc-amp">&amp;</span>
             <span className="lc-n2">{names[1]}</span>
           </h1>
-          <p className="lc-date lc-h3">23.01.2027</p>
+          <p className="lc-date lc-h3">{displayDate}</p>
           <Art className="lc-venue-sk lc-h4" name="venue" />
           <div className="lc-h5">
             <p className="lc-venue">{t.venue}</p>
@@ -159,7 +152,12 @@ export default function Card({ t, names, open, bm, event }) {
               {i === 1 && <p className="lc-script lc-fam-amp lc-rv">&amp;</p>}
               <div className="lc-fam lc-rv">
                 <p className="lc-caps lc-fam-role">{p.role}</p>
-                <p className="lc-fam-name">{personalize(p.fullName)}</p>
+                <p className="lc-fam-name">
+                  {wedding.couple[i].fullName.replace(
+                    wedding.couple[i].name,
+                    () => names[i],
+                  )}
+                </p>
                 <p className="lc-fam-par">
                   {p.parents[0]}
                   <br />
@@ -254,7 +252,7 @@ export default function Card({ t, names, open, bm, event }) {
           ))}
         </div>
       </section>
-      <Gift t={t} bm={bm} personalize={personalize} />
+      <Gift t={t} bm={bm} />
       <Guestbook t={t} bm={bm} event={event} />
       <section className="lc-sec lc-close">
         <p className="lc-italic lc-rv">{t.closing}</p>
@@ -263,7 +261,7 @@ export default function Card({ t, names, open, bm, event }) {
           <span className="lc-camp"> &amp; </span>
           <span className="lc-cn">{names[1]}</span>
         </p>
-        <p className="lc-date lc-rv">23.01.2027</p>
+        <p className="lc-date lc-rv">{displayDate}</p>
         <p className="lc-foot">
           <a href="https://undangankahwin.com" target="_blank" rel="noreferrer">
             undangankahwin.com

@@ -1,3 +1,4 @@
+import { invitation, names as defaultNames } from "./wedding";
 import React, { useEffect, useRef, useState } from "react";
 import { createRoot } from "react-dom/client";
 import en from "./en.json";
@@ -17,18 +18,22 @@ const language = bm ? ms : en;
 const event = Object.hasOwn(language.variants, query.get("acara"))
   ? query.get("acara")
   : "resepsi";
-const t = { ...language, ...language.variants[event] };
+const t = invitation(language, event, bm);
 document.documentElement.lang = bm ? "ms" : "en";
 document.title =
-  (bm ? "Daun Mutiara" : "Pearl Leaves") + " · " + t.title + " Rayyan & Sofea";
+  (bm ? "Daun Mutiara" : "Pearl Leaves") +
+  " · " +
+  t.title +
+  " " +
+  defaultNames.join(" & ");
 function App() {
   const [names, setNames] = useState(() => {
     try {
-      const n = JSON.parse(localStorage.getItem("pearl-leaves:names"));
+      const n = JSON.parse(localStorage.getItem("wedding:names"));
       if (n?.length === 2 && n.every((s) => typeof s === "string" && s.trim()))
         return n;
     } catch {}
-    return ["Rayyan", "Sofea"];
+    return defaultNames;
   });
   const [phase, setPhase] = useState("sealed"),
     [playing, setPlaying] = useState(false);
@@ -72,7 +77,7 @@ function App() {
         onNames={(next) => {
           setNames(next);
           try {
-            localStorage.setItem("pearl-leaves:names", JSON.stringify(next));
+            localStorage.setItem("wedding:names", JSON.stringify(next));
           } catch {}
         }}
       />

@@ -28,6 +28,6 @@ The opening film is a 1080 × 1920 H.264 MP4 lasting 7.7 seconds. Tapping the se
 
 ## Invitation details
 
-Edit the invitation text, family details, event schedules, map links, sample gift accounts and calendar URLs in `src/en.json` and `src/bm.json`. Update the displayed date and countdown target in `src/Card.jsx`. The name preview updates the initials and names on the device.
+Edit the couple, Sanding venue, guest count, date and reception hours in `src/wedding.js`. Both languages use those details for the card, countdown, maps and calendar. The language files contain translated copy and template defaults. The name preview updates the initials and names on the device.
 
 RSVP responses and wishes are stored in the guest's browser. Collecting responses across devices requires a shared backend. Catalogue navigation, adjacent designs and the order button link to the reference provider.

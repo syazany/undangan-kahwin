@@ -1,3 +1,4 @@
+import { names as defaults } from "./wedding";
 import React, { useState } from "react";
 
 const host = "https://undangankahwin.com";
@@ -73,8 +74,8 @@ export default function Toolbar({ bm, event, opened, names, onNames }) {
               e.preventDefault();
               const d = new FormData(e.currentTarget);
               onNames([
-                String(d.get("groom")).trim() || "Rayyan",
-                String(d.get("bride")).trim() || "Sofea",
+                String(d.get("groom")).trim() || defaults[0],
+                String(d.get("bride")).trim() || defaults[1],
               ]);
               setEditing(false);
             }}
