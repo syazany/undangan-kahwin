@@ -1,13 +1,24 @@
+import type { Phase } from "./wedding";
 import React, { useRef } from "react";
 import Flaps from "./Flaps";
 
-export default function Envelope({ phase, onOpen, names, bm }) {
-  const video = useRef(null);
+export default function Envelope({
+  phase,
+  onOpen,
+  names,
+  bm,
+}: {
+  phase: Phase;
+  onOpen: () => void;
+  names: string[];
+  bm: boolean;
+}) {
+  const video = useRef<HTMLVideoElement>(null);
   const label = bm ? "Sentuh meterai untuk membuka" : "Tap the seal to open";
   function unseal() {
     if (phase !== "sealed") return;
     if (!matchMedia("(prefers-reduced-motion: reduce)").matches)
-      video.current.play().catch(() => {});
+      video.current?.play().catch(() => {});
     onOpen();
   }
   return (

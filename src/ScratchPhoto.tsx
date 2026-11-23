@@ -1,11 +1,12 @@
 import React, { useEffect, useRef, useState } from "react";
 
-export default function ScratchPhoto({ bm }) {
-  const canvas = useRef(null);
+export default function ScratchPhoto({ bm }: { bm: boolean }) {
+  const canvas = useRef<HTMLCanvasElement>(null);
   const [revealed, setRevealed] = useState(false);
   useEffect(() => {
     const surface = canvas.current,
-      ctx = surface.getContext("2d", { willReadFrequently: true });
+      ctx = surface?.getContext("2d", { willReadFrequently: true });
+    if (!surface || !ctx) return;
     const cover = new Image();
     cover.onload = () => {
       ctx.globalCompositeOperation = "source-over";
@@ -17,19 +18,21 @@ export default function ScratchPhoto({ bm }) {
       cover.onload = null;
     };
   }, [bm]);
-  function erase(e) {
+  function erase(e: React.PointerEvent<HTMLCanvasElement>) {
     const c = e.currentTarget,
       ctx = c.getContext("2d"),
       r = c.getBoundingClientRect();
+    if (!ctx) return;
     const x = ((e.clientX - r.left) * c.width) / r.width,
       y = ((e.clientY - r.top) * c.height) / r.height;
     ctx.beginPath();
     ctx.arc(x, y, 44, 0, 2 * Math.PI);
     ctx.fill();
   }
-  function finish(e) {
+  function finish(e: React.PointerEvent<HTMLCanvasElement>) {
     const c = e.currentTarget,
-      pixels = c.getContext("2d").getImageData(0, 0, c.width, c.height).data;
+      pixels = c.getContext("2d")?.getImageData(0, 0, c.width, c.height).data;
+    if (!pixels) return;
     let clear = 0,
       total = 0;
     for (let y = 0; y < c.height; y += 12)
@@ -57,7 +60,7 @@ export default function ScratchPhoto({ bm }) {
             width="444"
             height="592"
             role="button"
-            tabIndex="0"
+            tabIndex={0}
             aria-label={bm ? "Gosok untuk melihat" : "Scratch to reveal"}
             onKeyDown={(e) => {
               if ([" ", "Enter"].includes(e.key)) {

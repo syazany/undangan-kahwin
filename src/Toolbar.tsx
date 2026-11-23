@@ -1,11 +1,24 @@
+import type { Occasion } from "./wedding";
 import { names as defaults } from "./wedding";
 import React, { useState } from "react";
 
 const host = "https://undangankahwin.com";
-export default function Toolbar({ bm, event, opened, names, onNames }) {
+export default function Toolbar({
+  bm,
+  event,
+  opened,
+  names,
+  onNames,
+}: {
+  bm: boolean;
+  event: Occasion;
+  opened: boolean;
+  names: string[];
+  onNames: (names: string[]) => void;
+}) {
   const [editing, setEditing] = useState(false);
   const lang = bm ? "bm" : "en",
-    query = (l, e) => "?lang=" + l + "&acara=" + e;
+    query = (l: string, e: string) => "?lang=" + l + "&acara=" + e;
   const label = bm ? "Cuba nama anda" : "Try your names";
   const types = {
     tunang: bm ? "Bertunang" : "Engagement",
@@ -92,7 +105,7 @@ export default function Toolbar({ bm, event, opened, names, onNames }) {
                     ? ["Nama pengantin lelaki", "Nama pengantin perempuan"]
                     : ["Groom’s name", "Bride’s name"])[i]
                 }
-                <input name={key} maxLength="40" defaultValue={names[i]} />
+                <input name={key} maxLength={40} defaultValue={names[i]} />
               </label>
             ))}
             <button>{bm ? "Tunjuk" : "Preview"}</button>

@@ -24,10 +24,10 @@ The invitation serves its artwork, fonts, video and soundtrack locally. Replace 
 | `rsvp_env.webp` | RSVP envelope |
 | `pufino-sentimental.mp3` | Looping background music |
 
-The opening film is a 1080 × 1920 H.264 MP4 lasting 7.7 seconds. Tapping the seal starts the film and the flap animation together. The invitation begins fading in at 7.45 seconds. A replacement clip of a different length needs corresponding timing changes in `src/main.jsx` and `src/envelope.css`.
+The opening film is a 1080 × 1920 H.264 MP4 lasting 7.7 seconds. Tapping the seal starts the film and the flap animation together. The invitation begins fading in at 7.45 seconds. A replacement clip of a different length needs corresponding timing changes in `src/main.tsx` and `src/envelope.css`.
 
 ## Invitation details
 
-Edit the couple, Sanding venue, guest count, date and reception hours in `src/wedding.js`. Both languages use those details for the card, countdown, maps and calendar. The language files contain translated copy and template defaults. The name preview updates the initials and names on the device.
+Edit the couple, Sanding venue, guest count, date and reception hours in `src/wedding.ts`. Both languages use those details for the card, countdown, maps and calendar. The language files contain translated copy and template defaults. The name preview updates the initials and names on the device.
 
 RSVP responses and wishes are stored in the guest's browser. Collecting responses across devices requires a shared backend. Catalogue navigation, adjacent designs and the order button link to the reference provider.

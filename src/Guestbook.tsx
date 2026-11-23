@@ -1,19 +1,33 @@
+import type { Invitation, Occasion } from "./wedding";
 import React, { useState } from "react";
 
-export default function Guestbook({ t, bm, event }) {
+export default function Guestbook({
+  t,
+  bm,
+  event,
+}: {
+  t: Invitation;
+  bm: boolean;
+  event: Occasion;
+}) {
   const key = "pearl-leaves:rsvp:" + event;
   const [open, setOpen] = useState(false);
-  const [entry, setEntry] = useState(() => {
+  const [entry, setEntry] = useState<Record<string, string> | null>(() => {
     try {
-      return JSON.parse(localStorage.getItem(key));
+      return JSON.parse(localStorage.getItem(key) ?? "null");
     } catch {
       return null;
     }
   });
   const [message, setMessage] = useState("");
-  function submit(e) {
+  function submit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
-    const data = Object.fromEntries(new FormData(e.currentTarget));
+    const data = Object.fromEntries(
+      Array.from(
+        new FormData(e.currentTarget),
+        ([key, value]) => [key, String(value)] as const,
+      ),
+    );
     if (data.attendance === "no") data.guests = "0";
     try {
       localStorage.setItem(key, JSON.stringify(data));
@@ -75,7 +89,7 @@ export default function Guestbook({ t, bm, event }) {
               <span className="lc-caps">{t.form[3]}</span>
               <textarea
                 name="wish"
-                rows="3"
+                rows={3}
                 maxLength={300}
                 defaultValue={entry?.wish}
               />

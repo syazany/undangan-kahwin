@@ -1,3 +1,4 @@
+import type { Phase } from "./wedding";
 import { invitation, names as defaultNames } from "./wedding";
 import React, { useEffect, useRef, useState } from "react";
 import { createRoot } from "react-dom/client";
@@ -15,9 +16,9 @@ import "./app.css";
 const query = new URLSearchParams(location.search);
 const bm = query.get("lang") === "bm";
 const language = bm ? ms : en;
-const event = Object.hasOwn(language.variants, query.get("acara"))
-  ? query.get("acara")
-  : "resepsi";
+const requested = query.get("acara");
+const event =
+  requested === "nikah" || requested === "tunang" ? requested : "resepsi";
 const t = invitation(language, event, bm);
 document.documentElement.lang = bm ? "ms" : "en";
 document.title =
@@ -27,24 +28,29 @@ document.title =
   " " +
   defaultNames.join(" & ");
 function App() {
-  const [names, setNames] = useState(() => {
+  const [names, setNames] = useState<string[]>(() => {
     try {
-      const n = JSON.parse(localStorage.getItem("wedding:names"));
-      if (n?.length === 2 && n.every((s) => typeof s === "string" && s.trim()))
+      const n = JSON.parse(localStorage.getItem("wedding:names") ?? "null");
+      if (
+        Array.isArray(n) &&
+        n.length === 2 &&
+        n.every((s) => typeof s === "string" && s.trim())
+      )
         return n;
     } catch {}
     return defaultNames;
   });
-  const [phase, setPhase] = useState("sealed"),
+  const [phase, setPhase] = useState<Phase>("sealed"),
     [playing, setPlaying] = useState(false);
-  const audio = useRef(null),
-    progress = useRef(null);
+  const audio = useRef<HTMLAudioElement>(null),
+    progress = useRef<HTMLElement>(null);
   const opened = phase === "reveal" || phase === "open";
   useEffect(() => {
     history.scrollRestoration = "manual";
     window.scrollTo(0, 0);
     function scroll() {
       const max = document.documentElement.scrollHeight - innerHeight;
+      if (!progress.current) return;
       progress.current.style.transform =
         "scaleX(" + (max > 0 ? scrollY / max : 0) + ")";
     }
@@ -68,7 +74,7 @@ function App() {
     }
   }, [phase]);
   function play() {
-    audio.current.play().catch(() => setPlaying(false));
+    audio.current?.play().catch(() => setPlaying(false));
   }
   return (
     <>
@@ -125,11 +131,11 @@ function App() {
             className="cgv-disc cgv-show"
             aria-label={bm ? "Togol muzik" : "Toggle music"}
             aria-pressed={playing}
-            onClick={() => (playing ? audio.current.pause() : play())}
+            onClick={() => (playing ? audio.current?.pause() : play())}
           />
         )}
       </div>
     </>
   );
 }
-createRoot(document.getElementById("root")).render(<App />);
+createRoot(document.getElementById("root")!).render(<App />);

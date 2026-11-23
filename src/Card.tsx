@@ -1,3 +1,4 @@
+import type { Invitation, Occasion } from "./wedding";
 import { wedding, displayDate, startsAt } from "./wedding";
 import React, { Fragment, useEffect, useRef, useState } from "react";
 import Guestbook from "./Guestbook";
@@ -18,14 +19,17 @@ const palette = [
   "#DCA79A",
   "#EFDDD1",
 ];
-const media = (name) => "/media/" + name + ".webp";
-function Art({ name, ...props }) {
+const media = (name: string) => "/media/" + name + ".webp";
+function Art({
+  name,
+  ...props
+}: { name: string } & React.ImgHTMLAttributes<HTMLImageElement>) {
   return <img alt="" src={media(name)} {...props} />;
 }
-function Heading({ children }) {
+function Heading({ children }: React.PropsWithChildren) {
   return <h2 className="lc-title lc-rv">{children}</h2>;
 }
-function Countdown({ t }) {
+function Countdown({ t }: { t: Invitation }) {
   const [now, setNow] = useState(Date.now);
   useEffect(() => {
     const id = setInterval(() => setNow(Date.now()), 1000);
@@ -55,7 +59,7 @@ function Countdown({ t }) {
     </section>
   );
 }
-function Gift({ t, bm }) {
+function Gift({ t, bm }: { t: Invitation; bm: boolean }) {
   const [status, setStatus] = useState("");
   return (
     <section className="lc-sec lc-gift">
@@ -90,8 +94,20 @@ function Gift({ t, bm }) {
     </section>
   );
 }
-export default function Card({ t, names, open, bm, event }) {
-  const card = useRef(null);
+export default function Card({
+  t,
+  names,
+  open,
+  bm,
+  event,
+}: {
+  t: Invitation;
+  names: string[];
+  open: boolean;
+  bm: boolean;
+  event: Occasion;
+}) {
+  const card = useRef<HTMLElement>(null);
   useEffect(() => {
     if (!open) return;
     const observer = new IntersectionObserver(
@@ -104,7 +120,9 @@ export default function Card({ t, names, open, bm, event }) {
         }),
       { threshold: 0.05 },
     );
-    card.current.querySelectorAll(".lc-rv").forEach((n) => observer.observe(n));
+    card.current
+      ?.querySelectorAll(".lc-rv")
+      .forEach((n) => observer.observe(n));
     return () => observer.disconnect();
   }, [open]);
   const calendar = new URL(t.calendar.url);

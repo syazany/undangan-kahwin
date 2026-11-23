@@ -1,11 +1,7 @@
 import React from "react";
 export default function Flaps() {
   return (
-    <div
-      xmlns="http://www.w3.org/1999/xhtml"
-      className="fe-env"
-      aria-hidden="true"
-    >
+    <div className="fe-env" aria-hidden="true">
       <div className="fe-flap fe-t">
         <span className="fe-face"></span>
         <span className="fe-sheen">

@@ -1,3 +1,9 @@
+import type en from "./en.json";
+import type ms from "./bm.json";
+type Language = typeof en | typeof ms;
+export type Occasion = keyof Language["variants"];
+export type Invitation = ReturnType<typeof invitation>;
+export type Phase = "sealed" | "opening" | "reveal" | "open";
 export const wedding = {
   couple: [
     { name: "Syazany", fullName: "Muhammad Syazany bin Shuhaimi" },
@@ -13,13 +19,13 @@ export const wedding = {
 };
 export const names = wedding.couple.map((person) => person.name);
 export const displayDate = wedding.date.split("-").reverse().join(".");
-const instant = (time) =>
+const instant = (time: string) =>
   new Date(wedding.date + "T" + time + ":00" + wedding.offset);
 export const startsAt = instant(wedding.start);
-const stamp = (time) =>
+const stamp = (time: string) =>
   instant(time).toISOString().replace(/[-:]/g, "").replace(".000", "");
 
-export function invitation(language, event, bm) {
+export function invitation(language: Language, event: Occasion, bm: boolean) {
   const t = { ...language, ...language.variants[event] };
   const date = startsAt.toLocaleDateString(bm ? "ms-MY" : "en-GB", {
     weekday: "long",
@@ -35,7 +41,7 @@ export function invitation(language, event, bm) {
     details[0] = date + " · " + details[0].split(" · ").pop();
     if (event !== "resepsi" || item !== t.events.at(-1))
       return { ...item, details };
-    const clock = (time) =>
+    const clock = (time: string) =>
       instant(time).toLocaleTimeString("en-US", {
         timeZone: "Asia/Kuala_Lumpur",
         hour: "numeric",
