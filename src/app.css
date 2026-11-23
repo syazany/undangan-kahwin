@@ -100,8 +100,7 @@ a {
   color: white;
 }
 .preview-tools .pill,
-.name-tools,
-.order {
+.name-tools {
   position: fixed;
   z-index: 80;
 }
@@ -164,8 +163,7 @@ a {
   left: 12px;
   top: 58px;
 }
-.try,
-.order {
+.try {
   display: inline-flex;
   align-items: center;
   gap: 6px;
@@ -215,20 +213,6 @@ a {
 .name-panel small {
   color: #756c64;
 }
-.order {
-  bottom: 16px;
-  right: 16px;
-  color: black;
-  background: #fbbf24;
-  padding: 12px 20px;
-  font-size: 14px;
-  transition: transform 0.5s;
-}
-.opened .order {
-  transform: translate(-62px, -88px);
-  padding: 8px 14px;
-  font-size: 12px;
-}
 @media (max-width: 380px) {
   .occasion {
     top: 94px;
@@ -240,8 +224,5 @@ a {
 @media (prefers-reduced-motion: reduce) {
   * {
     scroll-behavior: auto !important;
-  }
-  .order {
-    transition: none;
   }
 }

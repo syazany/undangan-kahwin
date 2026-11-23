@@ -128,12 +128,6 @@ export default function Toolbar({
           </a>
         ))}
       </nav>
-      <a
-        className="order"
-        href={host + "/order/cg-daun-mutiara?acara=" + event}
-      >
-        {bm ? "Tempah" : "Order"} {opened ? "·" : "—"} RM199 →
-      </a>
     </header>
   );
 }
